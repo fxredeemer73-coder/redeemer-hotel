@@ -1,0 +1,311 @@
+﻿
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Table Booking | Redeemer Luxurious Hotel</title>
+
+<style>
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #101714;
+  color: #fff;
+  line-height: 1.6;
+}
+
+header {
+  text-align: center;
+  padding: 30px 15px;
+  background: #080c0a;
+  border-bottom: 2px solid #d8b66a;
+}
+
+header h1 {
+  color: #e5c77e;
+  letter-spacing: 3px;
+  margin-bottom: 0;
+}
+
+header p { margin-top: 5px; }
+
+.container {
+  max-width: 750px;
+  margin: 35px auto;
+  padding: 30px;
+  background: #1a241e;
+  border: 1px solid #9c8148;
+  border-radius: 16px;
+  box-shadow: 0 10px 35px #0006;
+}
+
+h2 {
+  text-align: center;
+  color: #e5c77e;
+}
+
+.intro {
+  text-align: center;
+  color: #c7d0ca;
+  margin-bottom: 25px;
+}
+
+label {
+  display: block;
+  margin: 15px 0 6px;
+  font-weight: bold;
+  color: #f0d99d;
+}
+
+input, select, textarea {
+  width: 100%;
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid #526054;
+  background: #0e1510;
+  color: white;
+  font-size: 15px;
+}
+
+input:focus, select:focus, textarea:focus {
+  outline: 2px solid #d8b66a;
+}
+
+button {
+  width: 100%;
+  padding: 14px;
+  margin-top: 22px;
+  border: none;
+  border-radius: 8px;
+  background: #d8b66a;
+  color: #17150e;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #f0d99d;
+}
+
+#result {
+  display: none;
+  margin-top: 25px;
+  padding: 20px;
+  border: 1px solid #d8b66a;
+  border-radius: 10px;
+  overflow-wrap: anywhere;
+}
+
+#result h3 { color: #e5c77e; }
+
+.note {
+  color: #c7d0ca;
+  font-size: 13px;
+  margin-top: 18px;
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  color: #c7d0ca;
+  border-top: 1px solid #9c8148;
+}
+
+@media (max-width: 600px) {
+  .container { margin: 15px; padding: 20px; }
+}
+.auto-style1 {
+	font-family: Arial, Helvetica, sans-serif;
+	text-decoration: underline;
+}
+</style>
+<script type="text/javascript">
+<!--
+function FP_preloadImgs() {//v1.0
+ var d=document,a=arguments; if(!d.FP_imgs) d.FP_imgs=new Array();
+ for(var i=0; i<a.length; i++) { d.FP_imgs[i]=new Image; d.FP_imgs[i].src=a[i]; }
+}
+
+function FP_swapImg() {//v1.0
+ var doc=document,args=arguments,elm,n; doc.$imgSwaps=new Array(); for(n=2; n<args.length;
+ n+=2) { elm=FP_getObjectByID(args[n]); if(elm) { doc.$imgSwaps[doc.$imgSwaps.length]=elm;
+ elm.$src=elm.src; elm.src=args[n+1]; } }
+}
+
+function FP_getObjectByID(id,o) {//v1.0
+ var c,el,els,f,m,n; if(!o)o=document; if(o.getElementById) el=o.getElementById(id);
+ else if(o.layers) c=o.layers; else if(o.all) el=o.all[id]; if(el) return el;
+ if(o.id==id || o.name==id) return o; if(o.childNodes) c=o.childNodes; if(c)
+ for(n=0; n<c.length; n++) { el=FP_getObjectByID(id,c[n]); if(el) return el; }
+ f=o.forms; if(f) for(n=0; n<f.length; n++) { els=f[n].elements;
+ for(m=0; m<els.length; m++){ el=FP_getObjectByID(id,els[n]); if(el) return el; } }
+ return null;
+}
+// -->
+</script>
+</head>
+
+<body onload="FP_preloadImgs(/*url*/'button35.jpg',/*url*/'button36.jpg',/*url*/'button3B.jpg',/*url*/'button3C.jpg')">
+
+<header>
+  <h1>REDEEMER</h1>
+  <p>LUXURIOUS HOTEL</p>
+  <p>Luxury • Comfort • Exceptional Hospitality</p>
+</header>
+
+<main class="container">
+  <h2>Reserve Your Table</h2>
+
+  <p class="intro">
+    A table awaits you! Complete the form below to request
+    your dining reservation with us.
+  </p>
+
+  <form id="bookingForm">
+
+    <label for="name">Full Name *</label>
+    <input id="name" name="name" required
+           placeholder="Enter your full name">
+
+    <label for="phone">Phone Number *</label>
+    <input id="phone" name="phone" type="tel" required
+           placeholder="Enter your phone number">
+
+    <label for="email">Email Address</label>
+    <input id="email" name="email" type="email"
+           placeholder="you@example.com">
+
+    <label for="date">Booking Date *</label>
+    <input id="date" name="date" type="date" required>
+
+    <label for="time">Preferred Time *</label>
+    <select id="time" name="time" required>
+      <option value="">Choose a time</option>
+      <option>12:00 PM - Lunch</option>
+      <option>2:00 PM - Afternoon Dining</option>
+      <option>5:00 PM - Early Dinner</option>
+      <option>7:00 PM - Dinner</option>
+      <option>8:00 PM - Evening Dining</option>
+    </select>
+
+    <label for="guests">Number of Guests *</label>
+    <select id="guests" name="guests" required>
+      <option value="">Select number of guests</option>
+      <option>1 guest</option>
+      <option>2 guests</option>
+      <option>3-4 guests</option>
+      <option>5-8 guests</option>
+      <option>9 or more guests</option>
+    </select>
+
+    <label for="occasion">Occasion</label>
+    <select id="occasion" name="occasion">
+      <option>Normal Dining</option>
+      <option>Birthday Celebration</option>
+      <option>Romantic Dinner</option>
+      <option>Business Meeting</option>
+      <option>Family Gathering</option>
+      <option>Other</option>
+    </select>
+
+    <label for="requests">Special Requests</label>
+    <textarea id="requests" name="requests" rows="4"
+      placeholder="Any special arrangements?"></textarea>
+
+    <button type="submit">
+	<img id="img6" alt="SUBMIT" fp-style="fp-btn: Border Bottom 2; fp-font: Arial, Helvetica, sans-serif; fp-font-style: Bold; fp-font-size: 12" fp-title="SUBMIT" height="20" onmousedown="FP_swapImg(1,0,/*id*/'img6',/*url*/'button36.jpg')" onmouseout="FP_swapImg(0,0,/*id*/'img6',/*url*/'button34.jpg')" onmouseover="FP_swapImg(1,0,/*id*/'img6',/*url*/'button35.jpg')" onmouseup="FP_swapImg(0,0,/*id*/'img6',/*url*/'button35.jpg')" src="button34.jpg" style="border: 0" width="100"></button>
+
+    <p class="note">
+      Your reservation is not confirmed until the hotel
+      checks availability and contacts you.
+    </p>
+  </form>
+
+  <section id="result" aria-live="polite">
+    <h3>Booking Request Summary</h3>
+    <div id="summary"></div>
+    <p class="note">
+      This is a local summary only. Your request has not
+      been sent to the hotel.
+    </p>
+    <button type="button" id="copyButton">COPY BOOKING DETAILS</button>
+  </section>
+</main>
+
+<footer>
+  &copy; <span id="year"></span> Redeemer Luxurious Hotel
+  <br>Where Every Meal Becomes a Memory.
+<br><br><a href="HOME.html">
+	<img id="img7" alt="BACK" fp-style="fp-btn: Border Bottom 2; fp-font: Arial, Helvetica, sans-serif; fp-font-style: Bold; fp-font-size: 12" fp-title="BACK" height="20" onmousedown="FP_swapImg(1,0,/*id*/'img7',/*url*/'button3C.jpg')" onmouseout="FP_swapImg(0,0,/*id*/'img7',/*url*/'button3A.jpg')" onmouseover="FP_swapImg(1,0,/*id*/'img7',/*url*/'button3B.jpg')" onmouseup="FP_swapImg(0,0,/*id*/'img7',/*url*/'button3B.jpg')" src="button3A.jpg" style="border: 0" width="100"></a></footer>
+
+<script>
+const form = document.getElementById("bookingForm");
+const date = document.getElementById("date");
+const result = document.getElementById("result");
+const summary = document.getElementById("summary");
+
+const today = new Date();
+date.min = new Date(
+  today.getTime() - today.getTimezoneOffset() * 60000
+).toISOString().split("T")[0];
+
+document.getElementById("year").textContent =
+  new Date().getFullYear();
+
+let bookingDetails = "";
+
+form.addEventListener("submit", function(event) {
+  event.preventDefault();
+
+  if (!form.reportValidity()) return;
+
+  const data = new FormData(form);
+
+  const fields = [
+    ["Name", data.get("name")],
+    ["Phone", data.get("phone")],
+    ["Email", data.get("email") || "Not provided"],
+    ["Date", data.get("date")],
+    ["Time", data.get("time")],
+    ["Guests", data.get("guests")],
+    ["Occasion", data.get("occasion")],
+    ["Special Requests", data.get("requests") || "None"]
+  ];
+
+  bookingDetails = fields
+    .map(([label, value]) => label + ": " + value)
+    .join("\n");
+
+  summary.replaceChildren();
+
+  fields.forEach(([label, value]) => {
+    const p = document.createElement("p");
+    const strong = document.createElement("strong");
+
+    strong.textContent = label + ": ";
+    p.append(strong, document.createTextNode(value));
+    summary.appendChild(p);
+  });
+
+  result.style.display = "block";
+  result.scrollIntoView({ behavior: "smooth" });
+});
+
+document.getElementById("copyButton")
+  .addEventListener("click", async function() {
+    try {
+      await navigator.clipboard.writeText(bookingDetails);
+      this.textContent = "COPIED!";
+    } catch (error) {
+      window.prompt("Copy your booking details:", bookingDetails);
+    }
+  });
+</script>
+
+</body>
+</html>
+

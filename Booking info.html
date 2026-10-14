@@ -1,0 +1,177 @@
+﻿
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Room Booking | Redeemer Luxurious Hotel</title>
+<style type="text/css">
+.auto-style2 {
+	font-size: x-large;
+}
+.auto-style9 {
+	border: 3px solid #000000;
+	background-color: #000000;
+}
+.auto-style15 {
+	font-size: medium;
+	color: #07110D;
+}
+.auto-style17 {
+	font-family: Arial, Helvetica, sans-serif;
+	text-align: center;
+	border: 1px solid #000000;
+	background-color: #00FF00;
+	font-size: medium;
+	color: #07110D;
+}
+</style>
+</head>
+
+```html
+<!DOCTYPE html>
+<table cellpadding="0" cellspacing="0" style="width: 100%">
+	<tr>
+		<td><img alt="" height="352" src="support%20files/logo.png" width="501"></td>
+	</tr>
+</table>
+<html lang="en">
+<body style="margin:0; font-family:Arial,sans-serif; background:#101814; color:white;">
+
+<header style="text-align:center; padding:30px 15px; background:#07110d;">
+<h3 class="auto-style2">Luxury • Comfort • Excellence</h3>
+</header>
+
+<nav style="text-align:center; padding:15px; background:#17251e;">
+
+<table cellpadding="0" cellspacing="0" style="width: 12%" class="auto-style9">
+	<tr>
+		<td class="auto-style17" style="width: 514px; height: 30px;"><strong>&nbsp;<a href="HOME.html"><span class="auto-style15">HOME PAGE&nbsp;</span></a></strong></td>
+	</tr>
+</table>
+
+</nav>
+
+<section style="text-align:center; padding:30px 15px;">
+<h2 style="color:#d6b66a;">Book Your Perfect Room</h2>
+<p>Choose your room, select your dates, and request your stay with us.</p>
+</section>
+
+<section style="max-width:1000px; margin:auto; padding:15px;">
+
+<div style="background:#1b2a22; padding:20px; margin-bottom:20px; border-radius:10px;">
+<h2 style="color:#d6b66a;">1. Standard Comfort Room</h2>
+<p>A comfortable and welcoming room for guests seeking a relaxing stay.</p>
+<h3>UGX 80,000 per night</h3>
+<p>✓ Comfortable sleeping space</p>
+<p>✓ Clean and relaxing environment</p>
+<p>✓ Suitable for individual guests or couples</p>
+<button onclick="document.getElementById('room').value='Standard Comfort Room';document.getElementById('booking').scrollIntoView({behavior:'smooth'});" style="padding:12px 20px;background:#d6b66a;border:0;cursor:pointer;font-weight:bold;">BOOK THIS ROOM</button>
+</div>
+
+<div style="background:#1b2a22; padding:20px; margin-bottom:20px; border-radius:10px;">
+<h2 style="color:#d6b66a;">2. Deluxe Luxury Room</h2>
+<p>Enjoy extra comfort and a stylish atmosphere during your stay.</p>
+<h3>UGX 150,000 per night</h3>
+<p>✓ Spacious and elegant interior</p>
+<p>✓ Comfortable sleeping area</p>
+<p>✓ Ideal for a special and relaxing stay</p>
+<button onclick="document.getElementById('room').value='Deluxe Luxury Room';document.getElementById('booking').scrollIntoView({behavior:'smooth'});" style="padding:12px 20px;background:#d6b66a;border:0;cursor:pointer;font-weight:bold;">BOOK THIS ROOM</button>
+</div>
+
+<div style="background:#1b2a22; padding:20px; margin-bottom:20px; border-radius:10px;">
+<h2 style="color:#d6b66a;">3. Executive Suite</h2>
+<p>A premium choice for guests who want extra space and an upscale experience.</p>
+<h3>UGX 250,000 per night</h3>
+<p>✓ Spacious suite-style accommodation</p>
+<p>✓ Elegant and peaceful surroundings</p>
+<p>✓ Suitable for business or leisure stays</p>
+<button onclick="document.getElementById('room').value='Executive Suite';document.getElementById('booking').scrollIntoView({behavior:'smooth'});" style="padding:12px 20px;background:#d6b66a;border:0;cursor:pointer;font-weight:bold;">BOOK THIS ROOM</button>
+</div>
+
+<div style="background:#1b2a22; padding:20px; margin-bottom:20px; border-radius:10px;">
+<h2 style="color:#d6b66a;">4. Presidential Family Suite</h2>
+<p>A premium accommodation option for families or guests seeking more room.</p>
+<h3>UGX 350,000 per night</h3>
+<p>✓ Generous living space</p>
+<p>✓ Designed for family comfort</p>
+<p>✓ An elegant premium-stay experience</p>
+<button onclick="document.getElementById('room').value='Presidential Family Suite';document.getElementById('booking').scrollIntoView({behavior:'smooth'});" style="padding:12px 20px;background:#d6b66a;border:0;cursor:pointer;font-weight:bold;">BOOK THIS ROOM</button>
+</div>
+
+</section>
+
+<section id="booking" style="max-width:650px;width:90%;box-sizing:border-box;margin:30px auto;padding:25px;background:#1b2a22;border-radius:12px;">
+
+<h2 style="text-align:center;color:#d6b66a;">Room Reservation Form</h2>
+<p style="text-align:center;">Complete your details to request a room reservation.</p>
+
+<form onsubmit="
+var f=this;
+var details='REDEEMER LUXURIOUS HOTEL - ROOM BOOKING REQUEST\n\nGuest: '+f.guest.value+'\nPhone: '+f.phone.value+'\nEmail: '+f.email.value+'\nRoom: '+f.room.value+'\nCheck-in: '+f.checkin.value+'\nCheck-out: '+f.checkout.value+'\nGuests: '+f.guests.value+'\nSpecial requests: '+f.requests.value+'\n\nThis is a reservation request, not a confirmed booking.';
+document.getElementById('bookingresult').style.display='block';
+document.getElementById('bookingdetails').textContent=details;
+return false;
+">
+
+<label>Full Name</label><br>
+<input name="guest" required placeholder="Enter your full name" style="width:100%;box-sizing:border-box;padding:12px;margin:8px 0 18px;">
+
+<label>Phone Number</label><br>
+<input name="phone" type="tel" required placeholder="Enter your phone number" style="width:100%;box-sizing:border-box;padding:12px;margin:8px 0 18px;">
+
+<label>Email Address</label><br>
+<input name="email" type="email" required placeholder="Enter your email address" style="width:100%;box-sizing:border-box;padding:12px;margin:8px 0 18px;">
+
+<label>Select Room</label><br>
+<select id="room" name="room" required style="width:100%;box-sizing:border-box;padding:12px;margin:8px 0 18px;">
+<option value="">Choose a room</option>
+<option>Standard Comfort Room - UGX 80,000 per night</option>
+<option>Deluxe Luxury Room - UGX 150,000 per night</option>
+<option>Executive Suite - UGX 250,000 per night</option>
+<option>Presidential Family Suite - UGX 350,000 per night</option>
+</select>
+
+<label>Check-in Date</label><br>
+<input type="date" name="checkin" required style="width:100%;box-sizing:border-box;padding:12px;margin:8px 0 18px;">
+
+<label>Check-out Date</label><br>
+<input type="date" name="checkout" required style="width:100%;box-sizing:border-box;padding:12px;margin:8px 0 18px;">
+
+<label>Number of Guests</label><br>
+<select name="guests" required style="width:100%;box-sizing:border-box;padding:12px;margin:8px 0 18px;">
+<option value="">Select guests</option>
+<option>1 guest</option>
+<option>2 guests</option>
+<option>3 guests</option>
+<option>4 guests</option>
+<option>5 or more guests</option>
+</select>
+
+<label>Special Requests</label><br>
+<textarea name="requests" rows="4" placeholder="Any special requests?" style="width:100%;box-sizing:border-box;padding:12px;margin:8px 0 20px;"></textarea>
+
+<button type="submit" style="width:100%;padding:15px;background:#d6b66a;color:#101814;border:0;border-radius:6px;font-size:17px;font-weight:bold;cursor:pointer;">
+SUBMIT BOOKING REQUEST
+</button>
+
+</form>
+
+<div id="bookingresult" style="display:none;margin-top:25px;padding:18px;background:#263c2e;border:1px solid #d6b66a;border-radius:8px;">
+<h3 style="color:#d6b66a;">Your Booking Details</h3>
+<pre id="bookingdetails" style="white-space:pre-wrap;overflow-wrap:anywhere;font-family:Arial,sans-serif;"></pre>
+<button onclick="var t=document.getElementById('bookingdetails').textContent;if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(t).then(function(){alert('Booking details copied!');},function(){prompt('Copy your booking details:',t);});}else{prompt('Copy your booking details:',t);}" style="padding:12px;background:#d6b66a;border:0;cursor:pointer;font-weight:bold;">COPY BOOKING DETAILS</button>
+</div>
+
+<p style="text-align:center;font-size:13px;color:#ddd;margin-top:20px;">
+Please contact the hotel to confirm availability and your reservation.
+</p>
+
+</section>
+
+<footer style="text-align:center;padding:25px;background:#07110d;color:#d6b66a;">
+<p>© Redeemer Luxurious Hotel</p>
+<p>Experience Luxury. Experience Excellence.</p>
+</footer>
+
+</body>
+</html>
+```
